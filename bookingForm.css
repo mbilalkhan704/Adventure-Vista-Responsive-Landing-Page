@@ -1,0 +1,357 @@
+section.bookingForm,
+section.bookingForm0 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 4rem 0;
+    padding: 0 3vw;
+    overflow: hidden;
+}
+
+form.booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1; /* Allows the form to grow and take available space */
+    margin: 2vw 0;
+    border-radius: 2vw;
+    box-shadow: 2px 2px 3px #00FFFF;
+    border-left: 1px solid #00FFFF;
+    border-bottom: 1px solid #00FFFF;
+    overflow: hidden;
+}
+
+.booking-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8em 1em;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(#656973, #CAC0B3, #656973);
+    color: #001233;
+}
+
+@media screen and (max-width: 550px){
+    .booking-heading h2{
+        padding-right: 0;
+        word-spacing: normal;
+        letter-spacing: 1px;
+    }
+}
+.booking-heading .hide-form-btn{
+    display: flex;
+    margin: 0 2vw;
+    font-size: 12px;
+}
+
+.hide-form-btn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 70px;
+    border: 1px solid #CAC0B3;
+    border-radius: 1rem;
+}
+
+.hide-form-btn button span{
+    transform: rotate(180deg);
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.booking-form-cont {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0.5vw;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    flex-grow: 1; /* Allows the container to grow and take available space */
+}
+
+.bf-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #5D617E, #98A5B8, #C6D3DE, #E0D9D4, #C6D3DE, #98A5B8, #5D617E);
+    color: #001233;
+    width: 100%;
+    min-height: 2.5em; /* Ensures a minimum height */
+    border: 1px solid black;
+    border-bottom: 2.5px solid black;
+    border-radius: 2.5em;
+    box-sizing: content-box;
+    margin-bottom: 0.5em; /* Adds space between each bf-item */
+    margin-top: 0.5em;
+}
+
+.bf-item>*:nth-child(1),
+.bf-item>*:nth-child(2) {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    padding: 0.8em;
+}
+
+.bf-item>*:nth-child(1) {
+    padding-right: 0;
+}
+
+.bf-item>*:nth-child(1) {
+    width: 40%;
+}
+
+.bf-item>*:nth-child(2) {
+    width: 60%;
+}
+
+.bf-item>*:nth-child(1) p {
+    margin-bottom: 0;
+}
+
+.bf-item>*:nth-child(2) input,
+.bf-item>*:nth-child(2) select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 100%;
+    padding: 0.2% 5%;
+    background-color: transparent;
+    color: #001233;
+    border: 0.5px solid #001233;
+    border-radius: 2em;
+    font-size: 0.7em;
+}
+
+.bf-item16>*:nth-child(2) label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bf-item16>*:nth-child(2) label select {
+    width: 100%;
+}
+
+.bf-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 1em 0; /* Provides some padding for the button container */
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    height: auto;
+    opacity: 1;
+}
+
+.bf-btns button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5vw;
+    margin: 2vw;
+    cursor: pointer;
+    border-radius: 2em;
+    min-height: 35px;
+}
+
+.bf-cancelbtntxt {
+    background-color: #001233;
+    color: #CAC0B3;
+    border: 1px solid #CAC0B3;
+
+    &:hover {
+        background-color: #CAC0B3;
+        color: #001233;
+    }
+}
+
+@media (max-width:700px) {
+    .booking-heading {
+        padding: 0.5em 1em;
+    }
+
+    .booking-form-cont {
+        grid-template-columns: 80vw;
+        justify-content: center;
+    }
+
+    .bf-item {
+        min-height: 2em;
+        border-radius: 2em;
+    }
+
+    .bf-item16 {
+        min-height: 7em;
+    }
+
+    .bf-item16>*:nth-child(1) {
+        align-items: flex-start;
+        padding: 1em 0.8em;
+    }
+
+    .bf-item16>*:nth-child(2) {
+        padding: 1em 0.8em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bf-carrierinp label{
+        margin: 3% 0;
+    }
+
+    .bf-btns {
+        padding: 0.5em 0;
+    }
+}
+
+@media (max-width: 500px){
+    .bf-btns button {
+        padding: 0 2vw;
+        min-height: 30px;
+        font-size: small;
+    }
+}
+@media (max-width:430px) {
+    .bf-item>*:nth-child(1) p {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .bf-item>*:nth-child(1) p {
+        font-size: 0.65em;
+    }
+}
+
+@media (min-width:430px) and (max-width:992px) {
+    .bf-item>*:nth-child(1) p {
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width:700px) and (max-width:856px) {
+    /* changing it so that the text does not exceed to second line */
+    .bf-item>*:nth-child(1) {
+        width: 50%;
+    }
+    .bf-item>*:nth-child(2) {
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    .bf-item>*:nth-child(1) p {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 701px) {
+    .bf-item17 {
+        width: 100%;
+        grid-column: span 2;
+    }
+    .bf-item16>*:nth-child(2)>*:not(:nth-child(1)) {
+        margin-left: 0.5vw;
+    }
+}
+
+@media (min-width:701px) and (max-width:992px) {
+    .bf-item16>*:nth-child(1) {
+        width: 25%;
+    }
+    
+    .bf-item16>*:nth-child(2) {
+        width: 75%;
+    }
+}
+
+@-moz-document url-prefix() {
+    input[type="number"] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+    }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.booking-form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    border-top: 1px solid grey;
+    z-index: 2;
+}
+
+.booking-form-text p{
+    margin: 2vw 0 4vw 0;
+}
+
+.hide-form-btn button,
+.booking-form-cont,
+.bf-btns,
+.booking-form-text {
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    height: auto;
+    opacity: 1;
+}
+.booking-form-cont.collapsed, 
+.booking-form-text.collapsed,
+.bf-btns.collapsed,
+.hide-form-btn.collapsed {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+}
+
+.book-now-btn{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.book-now-btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 140px;
+    background-color: #FF595A;
+    border: 2px solid #CAC0B3;
+    color: #001233;
+}
+
+.book-now-btn button span{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* transform: rotate(-90deg); */
+    height: 100%;
+    margin: 5px;
+    font-size: 20px;
+}

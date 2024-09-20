@@ -1,0 +1,19 @@
+/* WEBSITE INTRO */
+.web-intro {
+    z-index: 1;
+    position: relative;
+    flex-direction: column;
+    margin: 3vw 0;
+    padding: 5vw;
+    /* border: 1px solid black; */
+}
+
+.underline-av {
+    text-decoration: underline;
+}
+
+.web-intro p {
+    font-size: calc(0.9rem - 0.4px);
+    line-height: 1.5rem;
+    word-spacing: 0.1rem;
+}

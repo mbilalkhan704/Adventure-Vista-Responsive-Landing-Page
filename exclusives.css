@@ -1,0 +1,289 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Exclusives */
+section.exclusives{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 6rem);
+  margin: 6vw 3rem;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  border-style: ridge;
+}
+
+.zigzag-border{
+  position: relative;
+}
+
+.zigzag-border:before,
+.zigzag-border:after,
+.zigzag-border .zigzag-left,
+.zigzag-border .zigzag-right {
+  content: '';
+  position: absolute;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0,
+    transparent 5px,
+    #CAC0B3 5px,
+    #CAC0B3 10px
+  );
+}
+
+.zigzag-border:before,
+.zigzag-border:after {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.zigzag-border:before {
+  top: -10px;
+}
+
+.zigzag-border:after {
+  bottom: -10px;
+}
+
+.zigzag-border .zigzag-left,
+.zigzag-border .zigzag-right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 5px,
+    #CAC0B3 5px,
+    #CAC0B3 10px
+  );
+}
+
+.zigzag-border .zigzag-left {
+  left: -10px;
+}
+
+.zigzag-border .zigzag-right {
+  right: -10px;
+}
+
+.exclusives-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-start;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding: 2% 5%;
+}
+
+.exclusives-text  h4{
+  margin: 1% 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.exclusives .exclusives-heading {
+  display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    padding: 1% 5%;
+    background: linear-gradient(#656973, #CAC0B3, #656973);
+    color: #001233;
+}
+
+@media screen and (max-width: 750px) {
+  .exclusives .exclusives-heading {
+      padding: 1% 7%;
+  }
+  .exclusives-text{
+    padding: 4% 7%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .exclusives .exclusives-heading {
+      padding: 1% 8.5%;
+  }
+  .exclusives-text{
+      padding: 4% 8.5%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .exclusives .exclusives-heading {
+      padding: 1% 10%;
+  }
+  .exclusives-text{
+      padding: 6% 10%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .exclusives .exclusives-heading {
+      padding: 1% 13%;
+  }
+  .exclusives-text{
+      padding: 6% 13%;
+  }
+}
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  padding: 0 35px;
+}
+
+.wrapper i {
+  top: calc(50% - 35px); /* Center vertically relative to the 250px height image */
+  height: 44px;
+  width: 44px;
+  margin: 0 35px;
+  color: #FF595A;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #CAC0B3;
+  border-radius: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+  left: -20px;
+  display: none;
+}
+
+.wrapper i:last-child {
+  right: -20px;
+}
+
+.wrapper .carousel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  font-size: 0;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  gap: 14px; /* Add a 14px gap between items */
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel .slider-img {
+  flex: 0 0 calc(25% - 14px); /* Each box takes up 25% of the carousel width minus gap */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel .slider-img img {
+  height: 250px; /* Set height of the image */
+  width: 100%; /* Make the image fit the width of the box */
+  object-fit: cover;
+  user-select: none;
+}
+
+.carousel img:first-child {
+  margin-left: 0;
+}
+
+.carousel .slider-img .slider-imgText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5vw;
+}
+
+.carousel .slider-img .slider-imgText .slider-imgText-inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2%;
+  font-size: 15px;
+  background: linear-gradient(#CAC0B3,#656973, #656973);
+  color: #001233;
+}
+
+.carousel .slider-img .slider-imgText .slider-imgText-inner p{
+  margin-bottom: 0;
+}
+
+.carousel .slider-img .slider-imgText .slider-imgText-inner .exclusive-offer-days {
+  font-style: italic;
+}
+
+.carousel .slider-img .slider-imgText .exclusive-offer-place{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-radius: 2rem;
+  background-color: #FF595A;
+  color: #001233;
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .carousel .slider-img {
+    flex: 0 0 calc(25% - 14px); /* Adjust width to fit four items minus gap */
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .carousel .slider-img {
+    flex: 0 0 calc(33.33% - 14px); /* Adjust width to fit three items minus gap */
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .carousel .slider-img {
+    flex: 0 0 calc(50% - 14px); /* Adjust width to fit two items minus gap */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel .slider-img {
+    flex: 0 0 100%; /* Adjust width to fit one item */
+  }
+}

@@ -1,0 +1,295 @@
+/* CAROUSEL */
+/* Carousel div */
+.carousel1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.carousel1-container {
+    min-width: 100%;
+}
+
+.carousel-1 {
+    position: relative;
+    width: 100%;
+    padding-top: var(--carousel1-padding-top);
+    overflow: hidden;
+    background-color: rgb(210, 236, 238);
+}
+
+.carousel1-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Carousel Images */
+.carousel1-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Carousel Arrows */
+.carousel1-left-arrow,
+.carousel1-right-arrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    width: var(--carousel1-left-right-arrow-width);
+    cursor: pointer;
+}
+
+.carousel1-left-arrow {
+    left: 0;
+}
+
+.carousel1-right-arrow {
+    right: 0;
+}
+
+.carousel1-left-arrow:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.carousel1-right-arrow:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.carousel1-chevron.carousel1-right {
+    transform: rotate(45deg);
+}
+
+.carousel1-chevron.carousel1-left {
+    transform: rotate(-135deg);
+}
+
+.carousel1-left-arrow:hover .carousel1-chevron,
+.carousel1-right-arrow:hover .carousel1-chevron {
+    border-color: #e6e6e6;
+}
+
+.carousel1-chevron {
+    width: calc(var(--carousel1-chevron-width) * 1%);
+    height: calc((var(--carousel1-left-right-arrow-width)*var(--carousel1-chevron-width))/100);
+    border: solid #ff595a;
+    border-width: 0.4vw 0.4vw 0 0;
+}
+
+/* Carousel Circles */
+.carousel1-circle-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--carousel1-circle-container-height);
+}
+
+.carousel1-circle {
+    border: 1px solid white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0.1vw 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.carousel1-circle-fill {
+    background-color: white;
+}
+
+/* Carousel Text */
+.carousel1-text-container {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    top: 5%;
+    bottom: 8%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 87%;
+}
+
+.carousel1-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+}
+
+.carousel1-text-container p:nth-child(1),
+.carousel1-text-container p:nth-child(2) {
+    display: flex;
+    margin: 1%;
+    padding: 0.5% 3%;
+}
+
+.carousel1-text-container p:nth-child(1) {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: yellow;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+    font-family: "Dancing Script", cursive;
+}
+
+.carousel1-text-container p:nth-child(2) {
+    width: 97%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(60, 60, 60, 0.5);
+    border-radius: 2em;
+
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px rgba(0, 0, 0, 1);
+    font-size: 1.15em;
+    text-align: left;
+}
+
+.carousel1-text-container {
+    transform: translateY(500px);
+}
+
+.carousel1-screen.active .carousel1-text-container {
+    transform: translateY(0);
+    transition: transform 0.5s ease 1s;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    :root {
+        --carousel1-chevron-width: 35;
+        --carousel1-circle-container-height: 1rem;
+    }
+
+    .carousel1-circle-container {
+        height: 1rem;
+    }
+
+    .carousel1-circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --carousel1-left-right-arrow-width: 20vw;
+        --carousel1-padding-top: calc(700 / 1200 * 100%);
+    }
+}
+
+@media (min-width: 601px) and (max-width:850px) {
+    :root {
+        --carousel1-left-right-arrow-width: 15vw;
+        --carousel1-padding-top: calc(700 / 1200 * 90%);
+    }
+}
+
+@media (min-width: 851px) and (max-width: 1150px) {
+    :root {
+        --carousel1-left-right-arrow-width: 12vw;
+        --carousel1-padding-top: calc(700 / 1200 * 70%);
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .carousel1-text-container p:nth-child(1) {
+        font-size: 2.25em;
+    }
+
+    .carousel1-text-container p:nth-child(2) {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 750px) {
+    .carousel1-text-container p:nth-child(1) {
+        font-size: 2.1em;
+    }
+}
+
+@media (max-width: 810px) {
+    .carousel1-text-container p:nth-child(2) {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel1-text-container p:nth-child(1) {
+        font-size: 1.9em;
+    }
+
+    .carousel1-text-container p:nth-child(2) {
+        font-size: 0.8em;
+    }
+}
+
+/* Animations */
+@keyframes toRight {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes comeRight {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes comeLeft {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+

@@ -1,0 +1,197 @@
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/footer/1.jpg");
+    background-position:center;
+    background-attachment: scroll;
+}
+
+.footer-translucent-cover{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 18, 51, 1), rgba(0, 18, 51, 0.7), rgba(0, 18, 51, 0.5), rgba(0, 18, 51, 0.3), rgba(0, 18, 51, 0.3) );
+}
+.footer-i-1{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.footer-brand-info,
+.footer-links {
+    width: calc(100%/4);
+    display: flex;
+    align-items: center;
+}
+
+.footer-brand-info {
+    width: calc(100%/3);
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 2vw;
+}
+
+.footer-links {
+    width: calc(100% - (100%/4));
+    justify-content: center;
+}
+
+.footer-links-inner{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.fl1, .fl2, .fl3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 1%;
+    width: calc(100%/3);
+    margin-left: 2vw;
+}
+
+.fl1-label, .fl2-label, .fl3-label {
+    color: #FF595A;
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.footer-links-inner ul{
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.footer-links-inner ul li{
+    margin: 0.3em 0;
+}
+
+.footer-links-inner a{
+    text-decoration: none;
+    color: #CAC0B3;
+}
+
+.footer-links-inner a:hover{
+    text-decoration: underline;
+    color: #8A8275;
+}
+
+.fbi-img,
+.fbi-sm-links{
+    margin: 1vw 0;
+}
+
+.fbi-img{
+    height: 18vw;
+    width: auto;
+}
+
+.fbi-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.fbi-sm-links{
+    width: 100%;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.fbi-sm-links a{
+    height: 100%;
+    margin: 0 2%;
+}
+
+.footer-i-2{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.designed-by,
+.copyright{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.designed-by {
+    justify-content: flex-start;
+}
+
+.designed-by p{
+    margin: 2vw 3vw;
+}
+
+.designed-by p:nth-child(1){
+    margin-right: 0.5vw;
+}
+
+.designed-by p:nth-child(2){
+    margin-left: 0.5vw;
+    color: #FF595A;
+    font-family: "Dancing Script", cursive;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.copyright{
+    justify-content: center;
+}
+
+.designed-by:nth-child(1), .copyright p, .footer-links-inner ul{
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    color: #CAC0B3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 900px){
+    .footer-brand-info {
+        display: none;
+    }
+    
+    .footer-links {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .footer{
+        background-image: url("images/footer/2.jpg"); 
+        background-attachment: scroll;
+    }
+
+    .footer-links-inner{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .fl1, .fl2, .fl3 {
+        width: 100%;
+        margin: 1em 0;
+        align-items: center;
+    }
+
+    .links-list1,
+    .links-list2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .designed-by {
+        justify-content: center;
+    }
+}
