@@ -6,17 +6,17 @@ Aventure Vista is a sleek, modern travel website offering exclusive travel packa
 * About Us section.<br/>
 * Contact Us form with travel inquiries.<br/>
 
-## Tech Stack
+### Tech Stack
 - HTML<br/>
 - CSS<br/>
 - JavaScript<br/>
 - Bootstrap<br/>
 
-## Features
+### Features
 - Responsive design<br/>
 - Smooth animations<br/>
 - Custom booking form<br/>
 
-## Installation
+### Installation
 - Clone the repository: git clone https://github.com/username/adventure-vista.git<br/>
 - Open index.html in your browser.<br/>
